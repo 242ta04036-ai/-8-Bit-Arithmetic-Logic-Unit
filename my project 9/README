@@ -1,0 +1,80 @@
+# 8-Bit Arithmetic Logic Unit (ALU) using Verilog HDL
+
+## Project Overview
+
+An Arithmetic Logic Unit (ALU) is the core component of a processor that performs arithmetic and logical operations.
+
+This project implements an **8-bit ALU** capable of performing eight different operations selected using a 3-bit control signal.
+
+---
+
+## Features
+
+- 8-bit Data Width
+- Arithmetic Operations
+- Logical Operations
+- Combinational Circuit
+- Synthesizable Verilog HDL Design
+
+---
+
+## Inputs
+
+| Signal | Width | Description |
+|--------|------|-------------|
+| A | 8 | Operand A |
+| B | 8 | Operand B |
+| ALU_Sel | 3 | Operation Select |
+
+---
+
+## Outputs
+
+| Signal | Width | Description |
+|--------|------|-------------|
+| ALU_Out | 8 | Result |
+| CarryOut | 1 | Carry/Borrow Flag |
+
+---
+
+## ALU Operations
+
+| ALU_Sel | Operation |
+|---------|-----------|
+| 000 | Addition (A + B) |
+| 001 | Subtraction (A - B) |
+| 010 | Bitwise AND |
+| 011 | Bitwise OR |
+| 100 | Bitwise XOR |
+| 101 | Bitwise NOT A |
+| 110 | Left Shift A by 1 |
+| 111 | Right Shift A by 1 |
+
+---
+
+## Software Required
+
+- Icarus Verilog
+- GTKWave
+- ModelSim
+- Vivado
+
+---
+
+## Compile
+
+iverilog -o alu alu_8bit.v tb_alu_8bit.v
+
+## Run
+
+vvp alu
+
+## View Waveform
+
+gtkwave alu_8bit.vcd
+
+---
+
+## Expected Result
+
+The ALU performs all arithmetic and logical operations correctly based on the selected operation code.
